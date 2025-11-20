@@ -7,7 +7,7 @@ COPY src ./src
 RUN ./gradlew clean build -x test
 
 # Run stage
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-slim
 WORKDIR /app
 COPY --from=build /app/build/libs/*.jar app.jar
 EXPOSE 8080
