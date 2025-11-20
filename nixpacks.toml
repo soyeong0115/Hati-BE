@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["jdk17", "gradle"]
+
+[phases.build]
+cmds = ["./gradlew clean build -x test"]
+
+[start]
+cmd = "./gradlew bootRun"
