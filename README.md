@@ -64,7 +64,31 @@ MBTI 기반의 12개 문항을 통해 16가지 연말 동물 유형 중 하나�
 
 ## 📌 ERD
 
-// 수정해서 추가
+```mermaid
+erDiagram
+    FEEDBACK {
+        bigint id PK "AUTO_INCREMENT"
+        text content "NOT NULL"
+        varchar email "NOT NULL"
+        datetime created_at "NOT NULL"
+    }
+```
+
+### Table
+
+| 테이블명   | 설명                                 |
+| ---------- | ------------------------------------ |
+| `feedback` | 사용자 피드백 정보를 저장하는 테이블 |
+
+### Fields
+
+| 필드명       | 타입     | 설명                                         |
+| ------------ | -------- | -------------------------------------------- |
+| `id`         | BIGINT   | 피드백 고유 ID (Primary Key, Auto Increment) |
+| `content`    | TEXT     | 피드백 내용                                  |
+| `email`      | VARCHAR  | 사용자 이메일                                |
+| `created_at` | DATETIME | 피드백 작성 시간 (자동 생성)                 |
+
 
 ----
 
